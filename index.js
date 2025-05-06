@@ -39,7 +39,7 @@ async function initCluster() {
   });
 
   cluster.on('taskerror', (err, data) => {
-    console.error(`Task error for ${JSON.stringify(data)}: ${err.message}`);
+    console.error(`Task error for ${JSON.stringify(data)}: ${err.message} `);
   });
 
   cluster.task(async ({ page, data }) => {
